@@ -1,0 +1,196 @@
+﻿<Page
+    x:Class="ColorBars.Pages.ShowBars"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    Loaded="Page_Loaded">
+
+    <Page.Resources>
+
+        <Style TargetType="TextBlock" x:Key="TBHorz">
+            <Setter Property="Margin" Value="16,0,16,0"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="IsDoubleTapEnabled" Value="True"/>
+        </Style>
+
+        <!-- This needs to match number of colors shown in app -->
+        <x:Int32 x:Key="numColors">20</x:Int32>
+
+        <Style TargetType="Rectangle" x:Key="RectHorz">
+            <Setter Property="Grid.ColumnSpan" Value="{StaticResource numColors}"/>
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="RectVert">
+            <Setter Property="Grid.RowSpan" Value="{StaticResource numColors}"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
+        </Style>
+
+    </Page.Resources>
+    
+    <!-- Following grid contains mutiple grids overlayed on top of each other. Code behind contols visibility of underlying grids. -->
+    <Grid>
+        
+        <!-- Grid contains horizontal and vertical color bars. 20 thus far. -->
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Horizontal Rectangle: Horizontal rectangles that become the horizontal color bars.
+        DoubleTapped event set here applies to all items in the grid. -->
+        <Grid x:Name="GridHR" Grid.Row="0" DoubleTapped="Color_DoubleTapped">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="0"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="1"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="2"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="3"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="4"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="5"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="6"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="7"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="8"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="9"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="10"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="11"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="12"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="13"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="14"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="15"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="16"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="17"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="18"/>
+            <Rectangle Style="{StaticResource RectHorz}" Grid.Row="19"/>
+        </Grid>
+
+        <!-- Grid Horizontal Rectangle Text: Horizontal text that shows when Labels button is pressed.
+        DoubleTapped event set here applies to all items in the grid. -->
+        <Grid x:Name="GridHT" Grid.Row="0" DoubleTapped="Color_DoubleTapped">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="0"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="1"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="2"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="3"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="4"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="5"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="6"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="7"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="8"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="9"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="10"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="11"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="12"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="13"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="14"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="15"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="16"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="17"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="18"/>
+            <TextBlock Style="{StaticResource TBHorz}" Grid.Row="19"/>
+        </Grid>
+
+        <!-- Grid Vertical Rectangle: Vertical rectangles that become the vertical color bars.
+        DoubleTapped event set here applies to all items in the grid. -->
+        <Grid x:Name="GridVR" Grid.Row="0" DoubleTapped="Color_DoubleTapped">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="0"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="1"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="2"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="3"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="4"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="5"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="6"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="7"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="8"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="9"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="10"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="11"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="12"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="13"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="14"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="15"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="16"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="17"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="18"/>
+            <Rectangle Style="{StaticResource RectVert}" Grid.Column="19"/>
+        </Grid>
+
+        <!-- Grid Large Rectangle: Rectangle that shows on 'Color_DoubleTapped()' event.
+        DoubleTapped event set here applies to all items in the grid. -->
+        <Grid x:Name="GridLR" Grid.Row="0" DoubleTapped="Rectangle_DoubleTapped">
+            <Rectangle x:Name="LargeRect" Visibility="Collapsed"/>
+        </Grid>
+
+        <!-- Grid Large Rectangle Text: Text that shows on 'Color_DoubleTapped' event.
+        DoubleTapped event set here applies to all items in the grid.-->
+        <Grid x:Name="GridLT" Grid.Row="0" DoubleTapped="Rectangle_DoubleTapped">
+            <TextBlock x:Name="LargeRectText" Margin="16,0,16,0" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" IsDoubleTapEnabled="True"/>
+        </Grid>
+
+    </Grid>
+</Page>

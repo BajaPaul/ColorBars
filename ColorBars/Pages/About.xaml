@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="ColorBars.Pages.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    Loaded="Page_Loaded">
+
+    <RelativePanel>
+        <TextBlock x:Name="TblkPageMsg" Text="TblkPageMsg Text" Margin="16,8,16,8" TextAlignment="Center" TextWrapping="WrapWholeWords" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
+        <Button x:Name="ButRateApp" TabIndex="101" Content="Please rate and review application" Margin="16,8,16,8" Style="{StaticResource ButtonRevealStyle}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="TblkPageMsg" Click="ButRateApp_Click"/>
+        <Button x:Name="ButSMPTE" TabIndex="102" Content="Society Motion Picture Television Engineers" Margin="16,8,16,8" Style="{StaticResource ButtonRevealStyle}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="ButRateApp" Click="ButHyperlink_Click" Tag="https://www.smpte.org/"/>
+        <Button x:Name="ButLearnMore" TabIndex="103" Content="Learn more about SMPTE color bars" Margin="16,8,16,8" Style="{StaticResource ButtonRevealStyle}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="ButSMPTE" Click="ButHyperlink_Click" Tag="https://en.wikipedia.org/wiki/SMPTE_color_bars"/>
+        <Button x:Name="ButEmail" TabIndex="104" Content="Email Support" Margin="16,8,16,16" Style="{StaticResource ButtonRevealStyle}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="ButLearnMore" Click="ButHyperlink_Click" Tag="mailto:pghilino@live.com?subject=MultiMonitor SMPTE ColorBars"/>
+    </RelativePanel>
+</Page>
